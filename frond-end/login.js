@@ -66,9 +66,19 @@ class Login extends React.Component {
           >
             <Text style={{ color: 'white' }}>Log in</Text>
           </TouchableOpacity>
+         
         </View>
         <View style={{ alignItems: 'center', marginTop: 40 }}>
-     
+        <Text
+          style={[
+            styles.result,
+            { color: this.state.result ? 'green' : 'black' },
+          ]}
+        >  
+          {this.state.result
+            ? "Welcome "+this.state.result
+            : null}
+        </Text>
         </View>
       </SafeAreaView>
     );
@@ -111,6 +121,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 22,
     marginTop: 20,
+
   },
 });
 
